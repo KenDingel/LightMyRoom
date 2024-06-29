@@ -147,28 +147,18 @@ If you encounter any problems or have any questions, please open an issue in thi
 
 This README provides a comprehensive guide for setting up and using the LightMyRoom Discord bot. It includes all the necessary information about requirements, setup, usage, and customization.
 
-For the `requirements.txt` file, you should include:
-
-```
-nextcord==2.0.0a3
-requests==2.26.0
-```
-
 Remember to update the versions to the latest stable releases when you create your repository.
 
 Lastly, here's an example `config.json` file:
 
 ```json
 {
-  "discord_token": "YOUR_DISCORD_BOT_TOKEN_HERE",
-  "light_modes": {
-    "red": "abc123def456ghi789",
-    "blue": "jkl012mno345pqr678",
-    "rave": "stu901vwx234yz567",
-    "normal": "012abc345def678ghi",
-    "off": "jkl901mno234pqr567"
-  }
-}
+    "red": "UUID_FOR_RED_MODE",
+    "blue": "UUID_FOR_BLUE_MODE",
+    "rave": "UUID_FOR_RAVE_MODE",
+    "normal": "UUID_FOR_NORMAL_MODE",
+    "off": "UUID_FOR_OFF_MODE"
+   }
 ```
 
 Replace `YOUR_DISCORD_BOT_TOKEN_HERE` with your actual Discord bot token, and each UUID with the actual UUIDs from your Virtual Smart Home URL triggers.
