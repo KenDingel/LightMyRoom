@@ -34,7 +34,7 @@ LightMyRoom is a Discord bot that allows users to control Alexa-compatible smart
 
 2. Install the required Python packages:
    ```
-   pip install -r requirements.txt
+   pip install nextcord requests
    ```
 
 3. Set up your Virtual Smart Home account and create URL triggers for each light mode.
@@ -44,24 +44,22 @@ LightMyRoom is a Discord bot that allows users to control Alexa-compatible smart
 5. Create a `config.json` file in the project root directory with the following structure:
    ```json
    {
-     "discord_token": "YOUR_DISCORD_BOT_TOKEN",
-     "light_modes": {
-       "red": "UUID_FOR_RED_MODE",
-       "blue": "UUID_FOR_BLUE_MODE",
-       "rave": "UUID_FOR_RAVE_MODE",
-       "normal": "UUID_FOR_NORMAL_MODE",
-       "off": "UUID_FOR_OFF_MODE"
-     }
+    "red": "UUID_FOR_RED_MODE",
+    "blue": "UUID_FOR_BLUE_MODE",
+    "rave": "UUID_FOR_RAVE_MODE",
+    "normal": "UUID_FOR_NORMAL_MODE",
+    "off": "UUID_FOR_OFF_MODE"
    }
    ```
-   Replace `YOUR_DISCORD_BOT_TOKEN` with your actual Discord bot token, and each `UUID_FOR_X_MODE` with the corresponding UUID from your Virtual Smart Home URL triggers.
+   Replace `UUID_FOR_X_MODE` with the corresponding UUID from your Virtual Smart Home URL triggers.
+   For example everything after 'trigger=' in the link provided by the site.  
 
-6. Update the `BASE_URL` constant in the `lightmyroom.py` file if necessary:
+7. Update the `BASE_URL` constant in the `lightmyroom.py` file if necessary:
    ```python
    BASE_URL = "https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger="
    ```
 
-7. (Optional) Replace the default light icon URL in the `create_lights_embed` function with your own icon:
+8. (Optional) Replace the default light icon URL in the `create_lights_embed` function with your own icon:
    ```python
    embed.set_author(name="LightMyRoom", icon_url="https://example.com/your_light_icon.png")
    ```
