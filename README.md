@@ -162,5 +162,3 @@ Lastly, here's an example `config.json` file:
 ```
 
 Replace `YOUR_DISCORD_BOT_TOKEN_HERE` with your actual Discord bot token, and each UUID with the actual UUIDs from your Virtual Smart Home URL triggers.
-
-This setup provides a solid foundation for your GitHub repository, making it easy for others to understand, use, and potentially contribute to your project.
